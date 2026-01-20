@@ -1,1 +1,116 @@
+:root {
+  --bg: #0f0f0f;
+  --card: #181818;
+  --text: #eaeaea;
+  --muted: #a1a1a1;
+  --accent: #4f8cff;
+}
 
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 24px;
+}
+
+header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+}
+
+.hero p {
+  margin-top: 20px;
+  max-width: 600px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.hero .actions {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid #333;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.card {
+  background: var(--card);
+  padding: 32px;
+  border-radius: 12px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.project-card h3 { margin-bottom: 8px; }
+
+.project-card p { color: var(--muted); font-size: 0.95rem; }
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill {
+  background: #222;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.contact {
+  text-align: center;
+}
+
+footer {
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid #222;
+}
+
+@media (max-width: 768px) {
+  .about { grid-template-columns: 1fr; }
+}
